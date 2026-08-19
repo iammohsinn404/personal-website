@@ -2,25 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=500, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohsin's personal Website">
+
+    <title>Mohsin | PERSONAL WEBSITE!</title>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <title>MY PERSONAL WEBSITE!</title>
 </head>
-<body class="intro">
-    <h1>HI! <span class="user-name">_iamohsinn404_ </span> !</h1>
-    <div class="links">
-        <a href="https://github.com/MohsinPAK-VC/personal-website.git" target="_blank" class="fab fa-github"></a>
-    </div>
-        <img class="front-img" class="images" src="IMAGES/MOHSIN IMAGE.png" alt="Personal Website">
-    <div class="container">
-    <p class="container-text"> I am Mohsin. I am a student, and I just started coding.<br/>
+<body>
+      <!--NAVBAR--> 
+      <header class="topbar">
+        <a herf="#home" class="logo">
+            Mohsin...
+        </a>
+        <nav>
+            <a herf="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button id="themeBtn" class="theme-btn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+      </header>
+      <main>
+        <!--HERO-->
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <p class="small-title">
+                    HI, I'M
+                </p>
+                <h1>
+                    Mohsin
+                    <span> _iammohsinn404_ </span>
+                </h1>
+                <p class="intro-text">
+                    A Student who is learning coding, buliding projects, and trying to become better with every project.
+                </p>
+                <div class="buttons">
+                    <a href="#projects" class="btn">
+                        See MY Projects
+                    </a>
+                    <a href="https://github.com/iammohsinn404"
+                    target="_blank"
+                    class="icon-btn">
+
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </a>
+                </div>
+            </div>
+            <img src="IMAGES/MOHSIN IMAGE.png" alt="Mohsin" class="profile">
+        </section>
+
+        <!--Aboutt-->
+        <section id="about" class="section">
+            <p class="section-label">
+                01 - ABOUT
+            </p>
+            <h2>
+                A little About me 
+            </h2>
+             <p>
+                I am Mohsin, a student and beginner coder. I started
+                making websites because I wanted to understand how
+                things work instead of only using them.
+
+                This website is a simple record of my coding journey.
+             </p>
+        </section>
+        <!--Section-->
+        <section id="skills" class="section">
+            <p class="section-label">
+                02 - SKILLS
+            </p>
+            <h2>
+                What I'm learning
+            </h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>
+                        HTML
+                    </h3>
+                    <p>
+                        Buliding the structure of websites.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h3>
+                        CSS
+                    </h3>
+                    <p>
+                        Learning layouts, colors and responsive design.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fa-brands fa-js"></i>
+                    <h3> JavaScript</h3>
+                    <p> 
+                        Learning how to make webistes interative.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--PROJECTS-->
+
+        <section id="projects" class="section">
+            <p class="section-label">
+                03 - PROJECTS
+            </p>
+            <h2>
+                Things I've Made
+            </h2>
+            <div class="cards">
+                <article class="card project">
+                    <h3>
+                        Birthday Website
+                    </h3>
+                    <p>
+                        An Interactive birthday website with animations and multiple sections.
+                    </p>
+                    <span>
+                        HTML - CSS - JavaScript
+                    </span>
+                </article>
+
+                <article class="card project">
+                    <h3>
+                        Worth Watches
+                    </h3>
+                    <p>
+                        A watch website concept where i exprimented with a more complete web experience.
+                    </p>
+                    <span>
+                        Web Project
+                    </span>
+                </article>
+                <article class="card project">
+                    <h3> 
+                        More Coming Soon
+                    </h3>
+                    <p>
+                        This is only the beginning. More Projects will be added as i learn
+                    </p>
+                    <span>
+                        In Progress
+                    </span>
+                </article>
+            </div>
+        </section>
+        <!--CONTACT-->
+        <section id="contact" class="section contact">
+            <p class="section-label">
+                04 - CONTACT
+            </p>
+            <h2>
+                Let's Connect
+            </h2>
+            <p>
+                Want to see what I'm Working on?
+                Check out My GitHub...
+            </p>
+            <a href="https://github.com/iammohsinn404"
+            target="_blank"
+            class="btn">
+            <i class="fa-brands fa-github"></i>
+            Visit GitHub
+        </a>
+       </section>
+      </main>
+
+      <!--FOOTER -->
+      <footer>
+        <p> Made BY _iammohsin404_ | Learning one project at a time.</p>
+      </footer>
+
+      <!---DARK MODE-->
+      <script>
+        const themeBtn = document.getElementById("themeBtn");
+        const icon = themeBtn.querySelector("i");
+
+        // Load saved Theme
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classlist.add("dark");
+
+            icon.className = "fa-solid fa-sun";
+        }
+        // Toggle theme
+        themeBtn.addEventListener("click", () => {
+            document.body.classlist.toggle("dark");
+
+            const dark =
+            document.body.classList.contains("dark");
+
+            localStorage.setItem(
+                "theme",
+                dark ? "dark" : "light"
+            );
+
+            icon.className =
+               dark
+               ? "fa-solid fa-sun"
+               : "fa-solid fa-moon";
+        });
         
-        I made a project before, but it was permanently banned 'cause I used AI without limits.<br/> When I failed, I was going to lose and stop doing everything, but then a person came and supported me.</br> Now I will not use any AI and will make the best project. </br>
-        
-        I will make and learn; now it's the start of my coding.</br>I hope I can make it true, learn the coding, and be able to make my own ADVANCED PROJECTS.
-    </p>
-    </div>
+      </script>
 </body>
 </html>
