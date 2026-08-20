@@ -1,3 +1,126 @@
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
- 
+ /* Variable */
+
+:root {
+
+    --bg: #f5f7f6;
+    --surface: #ffffff;
+
+    --text: #17211f;
+    --muted: #65716e;
+
+    --accent: #08a878;
+    --accent-dark: #067b5b;
+
+    --border: #dce5e1;
+
+    --shadow:
+        0 12px 35px rgba(20, 50, 43, 0.08);
+}
+
+
+/* DARK MODE */
+
+body.dark {
+
+    --bg: #101514;
+    --surface: #18201e;
+
+    --text: #edf5f2;
+    --muted: #aab8b4;
+
+    --border: #2b3935;
+
+    --shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25);
+}
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Montserrat", sans-serif;
+
+    transition: 
+          background 0.25s ease
+          color 0.25s ease;
+}
+
+/* Navbar */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 7%;
+    background: var(--bg);
+    border-bottom: 
+          1px solid var(--border);
+    backdrop-filter: blur(12px);      
+}
+
+.logo {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: var(--accent);
+}
+/* Theme Button */
+.theme-btn {
+  border:
+    1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-size: 15px;  
+}
+/* Hero */
+.hero {
+    width: min(1100px, 88%);
+    min-height: 78vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 680px;
+}
+.small-title,
+.section-label {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
