@@ -50,7 +50,7 @@ body {
     font-family: "Montserrat", sans-serif;
 
     transition: 
-          background 0.25s ease
+          background 0.25s ease,
           color 0.25s ease;
 }
 
@@ -214,18 +214,23 @@ h2 {
 }
 .card {
     padding: 24px;
+
     background: var(--surface);
-    border: 
-        1px solid var(--shadow);
+
+    border: 1px solid var(--border);
+
     border-radius: 18px;
+
     box-shadow: var(--shadow);
-    transition: transform
-             transform 0.2s,
-             border-color 0.2s;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
 }
+
 .card:hover {
     transform: translateY(-5px);
-    border-color: var(--accent)
+    border-color: var(--accent);
 }
 .card i {
     color: var(--accent);
@@ -300,4 +305,82 @@ footer {
     .section {
           padding: 65px 0;
       }
+}
+
+/* Project Button */
+
+.project-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 13px;
+
+    background: color-mix(
+    in srgb,
+    var(--accent) 12%,
+    var(--surface)
+);
+
+}
+.project-icon i {
+    font-size: 20px;
+}
+.project-buttons {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    background: var(--accent);
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+.project-btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+.project-btn.secondary {
+    background: var(--surface);
+    color: var(--text);
+
+    border: 1px solid var(--border);
+}
+.project-btn.secondary:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* Phone */
+
+@media (max-width: 700px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
