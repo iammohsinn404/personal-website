@@ -89,4 +89,13 @@ personal-website/
 └── IMAGES/
     ├── MOHSIN IMAGE.jpg
     ├── o.png
-    └── FULL PAGE IMG.png
+    └── FULL PAGE IMG.png.
+
+## Runing locally    
+
+
+
+Clone the repository:
+
+```bash
+git clone https://github.com/iammohsinn404/personal-website.git    
